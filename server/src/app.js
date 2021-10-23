@@ -9,9 +9,9 @@ app.use(express.json()) // Per treballar amb JSON (substitueix body.parser)
 app.use(express.urlencoded({extended: true})); // Per treballar amb JSON (substitueix body.parser)
 app.use(cors())
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
     res.send({
-        message: 'Hello World!'
+        message: `Hello ${req.body.email}`
     })
 })
 
